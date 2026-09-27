@@ -1,0 +1,20 @@
+[project]
+name = "pi5-opencv-test"
+version = "0.1.0"
+description = "Camera Module 3 browser stream with OpenCV face detection"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["flask>=3.1,<4"]
+
+[dependency-groups]
+dev = ["pytest>=8,<9"]
+
+[project.scripts]
+face-stream = "pi5_opencv_test.main:main"
+
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
